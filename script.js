@@ -95,7 +95,7 @@
 //   console.log("ERROR");
 // }
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numbers = [2, 4, 6, 8];
 
 // numbers.forEach(function (el) {
 //   if (el % 2 === 0) {
@@ -151,24 +151,24 @@ const movies = [
 // // }, 2000);
 
 // const usernames = [
-//   "markeynark",
-//   "stacey123456",
-//   "jen",
-//   "david10",
-//   "thomas2019",
-// ];
+// //   "markeynark",
+// //   "stacey123456",
+// //   "jen",
+// //   "david10",
+// //   "thomas2019",
+// // ];
 
-// // const randTen = (usernames) => usernames.filter((usr) => usr.length >= 10);
+// // // const randTen = (usernames) => usernames.filter((usr) => usr.length >= 10);
 
-// // console.log(randTen(usernames));
+// // // console.log(randTen(usernames));
 
-// const rand = (usernames) => usernames.every((usr) => usr.length >= 10);
+// // const rand = (usernames) => usernames.every((usr) => usr.length >= 10);
 
-// console.log(rand(usernames));
+// // console.log(rand(usernames));
 
-// reduce
+// // reduce
 
-const prices = [9.99, 1.5, 8.45, 9.2, 45.45, 30.5, 20.91];
+// const prices = [9.99, 1.5, 8.45, 9.2, 45.45, 30.5, 20.91];
 
 // let total = 0;
 // for (let price of prices) {
@@ -176,22 +176,52 @@ const prices = [9.99, 1.5, 8.45, 9.2, 45.45, 30.5, 20.91];
 // }
 // console.log(total);
 
-const total = prices.reduce((total, price) => {
-  return (total += price);
-});
+// // const total = prices.reduce((total, price) => {
+// //   return (total += price);
+// // });
 
-const minPrice = prices.reduce((min, price) => {
-  if (price < min) {
-    return price;
-  }
-  return min;
-});
+// const minPrice = prices.reduce((min, price) => {
+//   if (price < min) {
+//     return price;
+//   }
+//   return min;
+// });
 
-const favMovie = movies.reduce((bestMovie, currMovie) => {
-  if (currMovie.metascore > bestMovie.metascore) {
-    return currMovie;
-  }
-  return bestMovie;
-});
+// const favMovie = movies.reduce((bestMovie, currMovie) => {
+//   if (currMovie.metascore > bestMovie.metascore) {
+//     return currMovie;
+//   }
+//   return bestMovie;
+// });
 
-const short = numbers.reduce((sum, num) => sum + num, 50);
+// const short = numbers.reduce((sum, num) => sum + num, 60);
+
+// const person = {
+//   firstName: "aaron",
+//   lastName: "jeffries",
+//   fullName: function () {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+//   shoutName: function () {
+//     setTimeout(() => {
+//       console.log(this.fullName());
+//     }, 3000);
+//   },
+// };
+
+function rollDie(numSide = 6) {
+  return Math.floor(Math.random() * numside) + 1;
+}
+
+function greet(name, msg = "Hey there") {
+  console.log(`${msg}, ${name}`);
+}
+
+const arrOne = ["hawk", "parrot", "penguin"];
+const bugs = ["butterfly", "fly", "beetle"];
+
+console.log(...arrOne, ...bugs);
+
+function spread() {
+  console.log(..."hello");
+}
